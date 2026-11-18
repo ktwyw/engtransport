@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "engtransport"
+version = "0.1.0"
+description = "Heat and mass transfer through worked problems: a small, readable Python package, companion to the engtransport book of executed notebooks."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Yanwei Wang", email = "yanwei.wang@nu.edu.kz" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0"]
+keywords = ["heat transfer", "mass transfer", "transport phenomena", "chemical engineering", "education"]
+
+[project.urls]
+Homepage = "https://ktwyw.github.io/engtransport/"
+Repository = "https://github.com/ktwyw/engtransport"
+
+[project.optional-dependencies]
+book = ["scipy>=1.13", "matplotlib>=3.8.4", "jupyterlab", "nbconvert", "ipykernel"]
+test = ["pytest", "scipy>=1.13", "matplotlib>=3.8.4"]
+fit = ["scipy>=1.13", "CoolProp>=6.6"]
+
+[tool.setuptools]
+packages = ["engtransport"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]

@@ -1,0 +1,74 @@
+# Jupyter Book 2 (mystmd) configuration
+version: 1
+project:
+  title: "Heat and mass transfer through worked problems"
+  description: Conduction, convection, radiation and diffusion taught through engineering problems, with every result checked against an exact or independent numerical solution, in executed notebooks.
+  keywords: [heat transfer, mass transfer, transport phenomena, chemical engineering, engineering education]
+  authors:
+    - name: Yanwei Wang
+      orcid: 0000-0002-8488-9833
+      affiliations:
+        - School of Engineering, Nazarbayev University
+  github: https://github.com/ktwyw/engtransport
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  exclude:
+    - README.md
+    - DATA_LICENSE.md
+    - CHANGELOG.md
+    - _build/**
+  toc:
+    - file: docs/intro.md
+    - title: "Part I. Conduction"
+      children:
+        - file: notebooks/part1_conduction/01_heat_balances.ipynb
+        - file: notebooks/part1_conduction/02_steady_conduction.ipynb
+        - file: notebooks/part1_conduction/03_fins.ipynb
+        - file: notebooks/part1_conduction/04_two_dimensional.ipynb
+        - file: notebooks/part1_conduction/05_transient.ipynb
+        - file: notebooks/part1_conduction/06_semi_infinite.ipynb
+    - title: "Part II. Convection and heat exchangers"
+      children:
+        - file: notebooks/part2_convection/07_boundary_layers.ipynb
+        - file: notebooks/part2_convection/08_internal_flow.ipynb
+        - file: notebooks/part2_convection/09_natural_convection.ipynb
+        - file: notebooks/part2_convection/10_boiling_condensation.ipynb
+        - file: notebooks/part2_convection/11_heat_exchangers.ipynb
+    - title: "Part III. Radiation"
+      children:
+        - file: notebooks/part3_radiation/12_radiation_surfaces.ipynb
+        - file: notebooks/part3_radiation/13_view_factors_enclosures.ipynb
+    - title: "Part IV. Mass transfer"
+      children:
+        - file: notebooks/part4_mass_transfer/14_molecular_diffusion.ipynb
+        - file: notebooks/part4_mass_transfer/15_diffusion_reaction.ipynb
+        - file: notebooks/part4_mass_transfer/16_convective_mass_transfer.ipynb
+        - file: notebooks/part4_mass_transfer/17_simultaneous_heat_mass.ipynb
+        - file: notebooks/part4_mass_transfer/18_cleaning_schedule.ipynb
+    - title: "Solutions to the exercises"
+      children:
+        - file: solutions/part1_conduction/01_solutions.ipynb
+        - file: solutions/part1_conduction/02_solutions.ipynb
+        - file: solutions/part1_conduction/03_solutions.ipynb
+        - file: solutions/part1_conduction/04_solutions.ipynb
+        - file: solutions/part1_conduction/05_solutions.ipynb
+        - file: solutions/part1_conduction/06_solutions.ipynb
+        - file: solutions/part2_convection/07_solutions.ipynb
+        - file: solutions/part2_convection/08_solutions.ipynb
+        - file: solutions/part2_convection/09_solutions.ipynb
+        - file: solutions/part2_convection/10_solutions.ipynb
+        - file: solutions/part2_convection/11_solutions.ipynb
+        - file: solutions/part3_radiation/12_solutions.ipynb
+        - file: solutions/part3_radiation/13_solutions.ipynb
+        - file: solutions/part4_mass_transfer/14_solutions.ipynb
+        - file: solutions/part4_mass_transfer/15_solutions.ipynb
+        - file: solutions/part4_mass_transfer/16_solutions.ipynb
+        - file: solutions/part4_mass_transfer/17_solutions.ipynb
+        - file: solutions/part4_mass_transfer/18_solutions.ipynb
+    - file: docs/notation.md
+    - file: docs/references.md
+site:
+  template: book-theme
+  options:
+    logo_text: Heat and mass transfer
